@@ -27,4 +27,5 @@ dependencies {
 competitiveProgramming {
     basePackage = "competitive.programming.practice"
     author = "Saurabh Dutta"
+    githubUsername = "saurabh73"
 }
