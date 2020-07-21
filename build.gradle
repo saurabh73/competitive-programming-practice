@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'dev.saurabhdutta', name: 'competitive-programming-annotation', version: '1.0.0'
 }
 
 competitiveProgramming {
