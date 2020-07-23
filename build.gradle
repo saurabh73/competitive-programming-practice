@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     // add transitive dependencies for annotation
-    compileClasspath 'dev.saurabhdutta:competitive-programming-gradle-plugin:1.0.0'
+    compileClasspath 'com.github.saurabh73:competitive-programming-gradle-plugin:1.0.0'
 }
 
 competitiveProgramming {
