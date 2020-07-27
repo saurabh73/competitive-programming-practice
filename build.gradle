@@ -7,14 +7,14 @@ plugins {
 
 repositories {
     jcenter()
-    maven { url 'https://jitpack.io' }
+    // maven { url 'https://jitpack.io' }
     mavenLocal()
     mavenCentral()
 }
 
 dependencies {
     // add transitive dependencies for annotation
-    compileClasspath 'com.github.saurabh73.competitive-programming:competitive-programming:1.0.0'
+    compileClasspath 'com.github.saurabh73:competitive-programming:1.0.0'
 }
 
 competitiveProgramming {
