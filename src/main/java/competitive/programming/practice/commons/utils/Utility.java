@@ -17,6 +17,4 @@ public class Utility {
         return Arrays.stream(getStringArray(line)).mapToInt(Integer::parseInt).toArray();
     }
 
-
-
 }

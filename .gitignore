@@ -276,3 +276,4 @@ gradle-app.setting
 nohup.out
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,eclipse,java,gradle,groovy,netbeans,sublimetext,notepadpp
 output/Solution.java
+output/*.class

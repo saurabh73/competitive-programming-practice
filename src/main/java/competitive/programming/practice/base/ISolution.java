@@ -3,7 +3,7 @@ package competitive.programming.practice.base;
 import java.io.InputStream;
 
 /**
-* @author Saurabh Dutta<saurabh73> 
+* @author Saurabh Dutta<saurabh73>
 *
 **/
 public interface ISolution {
