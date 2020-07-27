@@ -1,6 +1,5 @@
 package competitive.programming.practice.base;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 /**

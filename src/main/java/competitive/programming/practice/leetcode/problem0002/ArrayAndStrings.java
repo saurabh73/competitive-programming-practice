@@ -4,7 +4,6 @@ import competitive.programming.annotation.leetcode.Entry;
 import competitive.programming.practice.base.ISolution;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -16,7 +15,7 @@ import java.util.Arrays;
  **/
 public class ArrayAndStrings implements ISolution {
     @Override
-    public void solve(InputStream in) throws IOException {
+    public void solve(InputStream in) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
         String line = reader.readLine().trim();
         String[][] arr = Arrays.stream(line.substring(2, line.length() - 2).split("\\],\\["))
