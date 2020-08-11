@@ -2,7 +2,7 @@ plugins {
     // Apply the java plugin to add support for Java
     id 'java'
     // Apply Competitive Programming Plugin
-    id 'com.github.saurabh73.competitive-programming' version '1.0.0'
+    id 'com.github.saurabh73.competitive-programming' version '1.0.1'
 }
 
 repositories {
@@ -14,11 +14,12 @@ repositories {
 
 dependencies {
     // add transitive dependencies for annotation
-    compileClasspath 'com.github.saurabh73.competitive-programming:competitive-programming:1.0.0'
+    compileClasspath 'com.github.saurabh73.competitive-programming:competitive-programming:1.0.1'
 }
 
 competitiveProgramming {
     basePackage = "competitive.programming.practice"
     author = "Saurabh Dutta"
     githubUsername = "saurabh73"
+    useCompetitiveCompanionPlugin = true
 }
