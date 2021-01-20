@@ -1,4 +1,4 @@
-package competitive.programming.practice.codechef.problem0001;
+package competitive.programming.practice.platform.codechef.problem0001;
 
 import competitive.programming.practice.base.ISolution;
 import java.io.InputStream;

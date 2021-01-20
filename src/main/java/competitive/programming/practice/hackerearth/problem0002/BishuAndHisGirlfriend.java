@@ -4,10 +4,6 @@ import competitive.programming.practice.base.ISolution;
 import competitive.programming.practice.commons.io.input.InputReader;
 
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Stack;
@@ -38,32 +34,31 @@ public class BishuAndHisGirlfriend implements ISolution {
             int girl = inputReader.nextInt();
             girls.put(girl, false);
         }
-
         findGirl(arr, girls);
     }
 
     private void findGirl(boolean[][] arr, Map<Integer, Boolean> girls) {
         boolean[] visited = new boolean[arr.length];
-        LinkedList<Integer> queue = new LinkedList<>();
-        queue.add(1);
+        Stack<Integer> stack = new Stack<>();
+        stack.add(1);
         visited[1] = true;
-        while (!queue.isEmpty()) {
-            int node = queue.pop();
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
             for (int i = 1; i < arr.length; i++) {
                 if (arr[node][i] && !visited[i]) {
-                    queue.add(i);
+                    stack.add(i);
                     visited[i] = true;
                     if (girls.containsKey(i)) {
                         girls.put(i, true);
                     }
                 }
             }
-            Optional<Map.Entry<Integer, Boolean>> girl = girls.entrySet().parallelStream().filter(Map.Entry::getValue).findFirst();
+            Optional<Map.Entry<Integer, Boolean>> girl =
+                    girls.entrySet().parallelStream().filter(Map.Entry::getValue).findFirst();
             if (girl.isPresent()) {
                 System.out.println(girl.get().getKey());
                 break;
             }
         }
-
     }
 }

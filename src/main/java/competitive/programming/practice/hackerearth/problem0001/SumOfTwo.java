@@ -15,7 +15,7 @@ public class SumOfTwo implements ISolution {
 
     @Override
     public void solve(InputStream in) throws Exception {
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(in);
 
         int num1 = s.nextInt(); // Get first integer
         int num2 = s.nextInt(); // Get second integer
