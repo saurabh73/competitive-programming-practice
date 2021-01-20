@@ -1,4 +1,4 @@
-package competitive.programming.practice.commons.utils;
+package competitive.programming.practice.common.utils;
 
 import java.util.Arrays;
 

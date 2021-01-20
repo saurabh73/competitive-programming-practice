@@ -1,4 +1,4 @@
-package competitive.programming.practice.commons.io.output;
+package competitive.programming.practice.common.io.output;
 
 import java.io.BufferedWriter;
 import java.io.OutputStream;

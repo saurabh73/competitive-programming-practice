@@ -1,4 +1,4 @@
-package competitive.programming.practice.commons.io.input;
+package competitive.programming.practice.common.io.input;
 
 import java.io.IOException;
 import java.io.InputStream;
