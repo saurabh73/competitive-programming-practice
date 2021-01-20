@@ -7,8 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.nio.charset.Charset;
 
@@ -22,16 +21,15 @@ class SumOfTwoTest {
     @BeforeEach
     void setup() {
         buffer = new ByteArrayOutputStream();
-        testFilePath = "src/test/java/competitive/programming/practice/hackerearth/problem0001/";
         System.setOut(new PrintStream(buffer));
     }
 
     @Test
     void testSolveInput1() throws Exception {
         // Input
-        FileInputStream inputStream = new FileInputStream(new File(testFilePath + "input1.txt"));
+        InputStream inputStream = this.getClass().getResourceAsStream( "/hackerearth/problem0001/input1.txt");
         // Output
-        FileInputStream outPutStream = new FileInputStream(new File(testFilePath + "output1.txt"));
+        InputStream outPutStream = this.getClass().getResourceAsStream( "/hackerearth/problem0001/output1.txt");
         // Call Method Under Test
         ISolution problem = new SumOfTwo();
         problem.solve(inputStream);
