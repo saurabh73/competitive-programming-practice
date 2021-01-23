@@ -2,7 +2,7 @@ plugins {
     // Apply the java plugin to add support for Java
     id 'java'
     // Apply Competitive Programming Plugin
-    id 'com.github.saurabh73.competitive-programming' version '1.1.0'
+    id 'com.github.saurabh73.competitive-programming' version '1.1.2'
 }
 
 sourceCompatibility=1.8
@@ -21,7 +21,7 @@ test {
 
 dependencies {
     // add transitive dependencies for annotation
-    compileClasspath 'com.github.saurabh73.competitive-programming:competitive-programming:1.1.0'
+    compileClasspath 'com.github.saurabh73.competitive-programming:competitive-programming:1.1.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
     testImplementation 'commons-io:commons-io:2.8.0'
@@ -31,4 +31,5 @@ competitiveProgramming {
     basePackage = "competitive.programming.practice"
     author = "Saurabh Dutta"
     githubUsername = "saurabh73"
+    port = 7373
 }
