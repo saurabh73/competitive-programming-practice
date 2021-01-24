@@ -1,5 +1,4 @@
-package competitive.programming.practice.platform.interviewbit.problem0001;
-
+package competitive.programming.practice.platform.interviewbit.problem0005;
 import competitive.programming.practice.base.ISolution;
 
 import org.apache.commons.io.IOUtils;
@@ -13,14 +12,16 @@ import java.io.PrintStream;
 import java.nio.charset.Charset;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 /**
- * Test for PickFromBothSides.java
- *
- * @author Saurabh Dutta<saurabh73>
- * @see <a href="https://www.interviewbit.com/problems/pick-from-both-sides/">https://www.interviewbit.com/problems/pick-from-both-sides/</a>
- **/
-public class PickFromBothSidesTest {
+*
+* Test for MaxMin.java 
+*
+* @author Saurabh Dutta<saurabh73> 
+*
+* @see <a href="https://www.interviewbit.com/problems/max-min-05542f2f-69aa-4253-9cc7-84eb7bf739c4/">https://www.interviewbit.com/problems/max-min-05542f2f-69aa-4253-9cc7-84eb7bf739c4/</a> 
+*
+**/
+public class MaxMinTest {
 
     private ByteArrayOutputStream buffer;
 
@@ -30,37 +31,39 @@ public class PickFromBothSidesTest {
         System.setOut(new PrintStream(buffer));
     }
 
+        
 
     @Test
     public void case1Test() throws Exception {
         // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0001/input1.txt");
+        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0005/input1.txt");
         // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0001/output1.txt");
+        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0005/output1.txt");
         // Call Method Under Test
-        ISolution problem = new PickFromBothSides();
+        ISolution problem = new MaxMin();
         problem.solve(inputStream);
         //Assertion
         String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
+        String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
         assertEquals(expected, actual);
     }
-
+        
 
     @Test
     public void case2Test() throws Exception {
         // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0001/input2.txt");
+        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0005/input2.txt");
         // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0001/output2.txt");
+        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0005/output2.txt");
         // Call Method Under Test
-        ISolution problem = new PickFromBothSides();
+        ISolution problem = new MaxMin();
         problem.solve(inputStream);
         //Assertion
         String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
+        String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
         assertEquals(expected, actual);
     }
+    
 
     @AfterEach
     public void cleanup() {

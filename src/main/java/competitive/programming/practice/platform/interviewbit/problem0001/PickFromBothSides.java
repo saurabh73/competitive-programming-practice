@@ -1,12 +1,11 @@
 package competitive.programming.practice.platform.interviewbit.problem0001;
 
 import competitive.programming.practice.base.ISolution;
+import competitive.programming.practice.common.utils.Utility;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /**
 *
@@ -20,25 +19,23 @@ public class PickFromBothSides implements ISolution {
     public void solve(InputStream in) throws Exception {
         //TODO: Implement Solution
         Scanner scanner = new Scanner(in);
-        String line = scanner.nextLine();
-        ArrayList<Integer> A = (ArrayList<Integer>) Arrays.stream(line.split(" "))
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());
+        int[] A = Utility.getIntArray(scanner.nextLine(), ",");
         int B = scanner.nextInt();
         System.out.println(solve(A, B));
     }
 
-    public int solve(ArrayList<Integer> A, int B) {
-        ArrayList<Integer> prefixArr = new ArrayList<>(A);
-        ArrayList<Integer> suffixArr = new ArrayList<>(A);
-        int N = A.size();
+    public int solve(int[] A, int B) {
+        int N = A.length;
+        int[] prefixArr = Arrays.copyOf(A, N);
+        int[] suffixArr = Arrays.copyOf(A, N);
+
         for (int i=1; i< N;i++) {
-            prefixArr.set(i, prefixArr.get(i-1)+ prefixArr.get(i));
-            suffixArr.set(N-i-1, suffixArr.get(N-i-1)+ suffixArr.get((N-i)));
+            prefixArr[i] = prefixArr[i-1] + prefixArr[i];
+            suffixArr[N-i-1]=suffixArr[N-i-1] + suffixArr[N-i];
         }
-        int max = Math.max(prefixArr.get(B-1), suffixArr.get(N-B));
+        int max = Math.max(prefixArr[B-1], suffixArr[N-B]);
         for(int i=0;i<B-1;i++) {
-            max = Math.max(max, prefixArr.get(i) + suffixArr.get(N-B+i+1));
+            max = Math.max(max, prefixArr[i] + suffixArr[N-B+i+1]);
         }
         return max;
     }
