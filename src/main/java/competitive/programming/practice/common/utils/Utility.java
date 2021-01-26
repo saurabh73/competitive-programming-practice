@@ -17,4 +17,8 @@ public class Utility {
         return Arrays.stream(getStringArray(line, delimiter)).mapToInt(Integer::parseInt).toArray();
     }
 
+    public static long[] getLongArray(String line, String delimiter) {
+        return Arrays.stream(getStringArray(line, delimiter)).mapToLong(Long::parseLong).toArray();
+    }
+
 }
