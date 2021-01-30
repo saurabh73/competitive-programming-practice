@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 * @see <a href="https://www.interviewbit.com/problems/verify-prime/">https://www.interviewbit.com/problems/verify-prime/</a> 
 *
 **/
-public class VerifyPrimeTest {
+public class VerifyPrimeUtilityTest {
 
     private ByteArrayOutputStream buffer;
 

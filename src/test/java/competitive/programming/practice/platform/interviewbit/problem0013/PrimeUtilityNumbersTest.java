@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 * @see <a href="https://www.interviewbit.com/problems/prime-numbers/">https://www.interviewbit.com/problems/prime-numbers/</a> 
 *
 **/
-public class PrimeNumbersTest {
+public class PrimeUtilityNumbersTest {
 
     private ByteArrayOutputStream buffer;
 
