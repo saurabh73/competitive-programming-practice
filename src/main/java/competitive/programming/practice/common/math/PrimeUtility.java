@@ -6,8 +6,8 @@ import java.util.List;
 
 public class PrimeUtility {
 
-    private int max;
-    private boolean[] primes;
+    private final int max;
+    private final boolean[] primes;
 
     public PrimeUtility(int max) {
         this.max = max;
