@@ -6,9 +6,11 @@ public class Utility {
 
     public static String[] getStringArray(String line, String delimiter) {
         return Arrays.stream(
-                line.replace("[", "")
+                line.replaceAll("\"", "")
+                        .replace("[", "")
                         .replace("]", "")
-                        .replaceAll("\"", "")
+                        .replace("{", "")
+                        .replace("}", "")
                         .split(delimiter)
         ).map(String::trim).toArray(String[]::new);
     }
