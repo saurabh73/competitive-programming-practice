@@ -22,13 +22,23 @@ public class StepByStep implements ISolution {
             return 0;
         }
         A = Math.abs(A);
-        int sum = 0;
+        int stepSum = 0;
         int step = 0;
-        while (sum < A || (sum-A)%2 == 0) {
+        while(stepSum < A) {
             step++;
-            sum+=step;
+            stepSum+= step;
         }
-        return step;
+        int d = stepSum - A;
+        if (d == 0) {
+            return step;
+        } else {
+            if (d%2 == 0) {
+                return step;
+            } else {
+                d = d + step +1;
+                return step + ((d%2 == 0) ? 1: 2);
+            }
+        }
     }
 
 }
