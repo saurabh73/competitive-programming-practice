@@ -77,6 +77,21 @@ public class LargestCoprimeDivisorTest {
         String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void case4Test() throws Exception {
+        // Input
+        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0033/input4.txt");
+        // Output
+        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0033/output4.txt");
+        // Call Method Under Test
+        ISolution problem = new LargestCoprimeDivisor();
+        problem.solve(inputStream);
+        //Assertion
+        String actual = buffer.toString().trim();
+        String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
+        assertEquals(expected, actual);
+    }
     
 
     @AfterEach

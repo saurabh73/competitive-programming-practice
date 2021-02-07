@@ -4,11 +4,7 @@ import competitive.programming.practice.base.ISolution;
 import competitive.programming.practice.common.math.MathUtility;
 
 import java.io.InputStream;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /**
  * @author Saurabh Dutta(saurabh73)
@@ -24,10 +20,24 @@ public class LargestCoprimeDivisor implements ISolution {
     }
 
     public int cpFact(int A, int B) {
-        List<Integer> collect = Arrays.stream(MathUtility.factors(A))
-                .filter(i -> MathUtility.gcd(i, B) == 1).boxed()
-                .sorted(Comparator.reverseOrder())
-                .collect(Collectors.toList());
-        return collect.get(0);
+        if (MathUtility.gcd(A, B) == 1) {
+            return A;
+        } else {
+            int max = -1;
+            for (int i = 2; i < Math.sqrt(A); i++) {
+                // If there is no remainder, then the number is a factor.
+                if (A % i == 0) {
+                    int num = i;
+                    if (MathUtility.gcd(num, B)==1 && num > max) {
+                        max = num;
+                    }
+                    num = A/i;
+                    if (MathUtility.gcd(num, B)==1 && num > max) {
+                        max = num;
+                    }
+                }
+            }
+            return max;
+        }
     }
 }
