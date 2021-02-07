@@ -1,11 +1,29 @@
 package competitive.programming.practice.common.math;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MathUtility {
 
     public static int gcd(int A, int B) {
         if (A == 0)
             return B;
         return gcd(B % A, A);
+    }
+
+    public static int[] factors(int A) {
+        Set<Integer> factors = new HashSet<>();
+        for (int i = 1; i < Math.sqrt(A); i++) {
+            // If there is no remainder, then the number is a factor.
+            if (A % i == 0) {
+                factors.add(i);
+                if (i != A / i) {
+                    factors.add(A / i);
+                }
+            }
+
+        }
+        return factors.stream().mapToInt(i -> i).toArray();
     }
 
     public static int encodeWithCantorFunction(int x, int y) {
