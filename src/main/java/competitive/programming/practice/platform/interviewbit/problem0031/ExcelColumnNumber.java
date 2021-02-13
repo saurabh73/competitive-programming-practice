@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author Saurabh Dutta(saurabh73)
- * @see <a href="https://www.interviewbit.com/problems/excel-column-number/">https://www.interviewbit.com/problems/excel-column-number/</a>
+ * @see <a href=,\nhttps://www.interviewbit.com/problems/excel-column-number/">https://www.interviewbit.com/problems/excel-column-number/</a>
  **/
 public class ExcelColumnNumber implements ISolution {
     @Override
