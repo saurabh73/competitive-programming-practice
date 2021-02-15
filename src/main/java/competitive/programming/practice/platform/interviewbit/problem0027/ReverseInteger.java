@@ -21,7 +21,6 @@ public class ReverseInteger implements ISolution {
     }
 
     public int reverse(int A) {
-        System.out.println(A);
         int sign = A > 0 ? 1: -1;
         A = A*sign;
         StringBuilder ans = new StringBuilder();

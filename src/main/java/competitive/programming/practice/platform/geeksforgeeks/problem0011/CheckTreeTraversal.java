@@ -45,7 +45,7 @@ public class CheckTreeTraversal implements ISolution {
         }
         postOrderTraversal(node.left, ans);
         postOrderTraversal(node.right, ans);
-        ans.append(node.value).append(",");
+        ans.append(node.data).append(",");
     }
 
     private Node buildTree(int[] preorder, int[] inorder, int start, int end) {
@@ -57,7 +57,7 @@ public class CheckTreeTraversal implements ISolution {
             return node;
         }
         //
-        int index = searchIndex(inorder, start, end, node.value);
+        int index = searchIndex(inorder, start, end, node.data);
         node.left = buildTree(preorder, inorder, start, index - 1);
         node.right = buildTree(preorder, inorder, index + 1, end);
         return node;

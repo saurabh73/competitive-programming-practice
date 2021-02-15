@@ -1,72 +1,29 @@
 package competitive.programming.practice.platform.geeksforgeeks.problem0010;
-import competitive.programming.practice.base.ISolution;
 
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import competitive.programming.practice.platform.BaseTest;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.nio.charset.Charset;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
-*
-* Test for RepeatedStringMatch.java 
-*
-* @author Saurabh Dutta(saurabh73)
-*
-* @see <a href="https://practice.geeksforgeeks.org/problems/0cba668df04d657fde4d1bd28b626a01e61097f1/1/">https://practice.geeksforgeeks.org/problems/0cba668df04d657fde4d1bd28b626a01e61097f1/1/</a> 
-*
-**/
-public class RepeatedStringMatchTest {
+ * Test for RepeatedStringMatch.java
+ *
+ * @author Saurabh Dutta(saurabh73)
+ * @see <a href="https://practice.geeksforgeeks.org/problems/0cba668df04d657fde4d1bd28b626a01e61097f1/1/">https://practice.geeksforgeeks.org/problems/0cba668df04d657fde4d1bd28b626a01e61097f1/1/</a>
+ **/
+public class RepeatedStringMatchTest extends BaseTest {
 
-    private ByteArrayOutputStream buffer;
-
-    @BeforeEach
-    public void setup() {
-        buffer = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(buffer));
+    protected RepeatedStringMatchTest() {
+        super("/geeksforgeeks/problem0010/", new RepeatedStringMatch());
     }
-
-        
 
     @Test
     public void case1Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/geeksforgeeks/problem0010/input1.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/geeksforgeeks/problem0010/output1.txt");
-        // Call Method Under Test
-        ISolution problem = new RepeatedStringMatch();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
+        runTest("input1.txt", "output1.txt");
     }
-        
+
 
     @Test
     public void case2Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/geeksforgeeks/problem0010/input2.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/geeksforgeeks/problem0010/output2.txt");
-        // Call Method Under Test
-        ISolution problem = new RepeatedStringMatch();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected =  IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
+        runTest("input2.txt", "output2.txt");
     }
-    
 
-    @AfterEach
-    public void cleanup() {
-        buffer.reset();
-    }
 }

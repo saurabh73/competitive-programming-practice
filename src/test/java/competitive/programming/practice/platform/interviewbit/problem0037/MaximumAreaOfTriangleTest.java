@@ -1,17 +1,7 @@
 package competitive.programming.practice.platform.interviewbit.problem0037;
 
-import competitive.programming.practice.base.ISolution;
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import competitive.programming.practice.platform.BaseTest;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
-import java.nio.charset.Charset;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test for MaximumAreaOfTriangle.java
@@ -19,81 +9,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Saurabh Dutta(saurabh73)
  * @see <a href="https://www.interviewbit.com/problems/maximum-area-of-triangle/">https://www.interviewbit.com/problems/maximum-area-of-triangle/</a>
  **/
-public class MaximumAreaOfTriangleTest {
+public class MaximumAreaOfTriangleTest extends BaseTest {
 
-    private ByteArrayOutputStream buffer;
-
-    @BeforeEach
-    public void setup() {
-        buffer = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(buffer));
+    protected MaximumAreaOfTriangleTest() {
+        super("/interviewbit/problem0037/", new MaximumAreaOfTriangle());
     }
-
 
     @Test
     public void case1Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/input1.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/output1.txt");
-        // Call Method Under Test
-        ISolution problem = new MaximumAreaOfTriangle();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
+        runTest("input1.txt", "output1.txt");
     }
 
 
     @Test
     public void case2Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/input2.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/output2.txt");
-        // Call Method Under Test
-        ISolution problem = new MaximumAreaOfTriangle();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
+        runTest("input2.txt", "output2.txt");
     }
 
     @Test
     public void case3Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/input3.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/output3.txt");
-        // Call Method Under Test
-        ISolution problem = new MaximumAreaOfTriangle();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
+        runTest("input3.txt", "output3.txt");
     }
 
 
     @Test
     public void case4Test() throws Exception {
-        // Input
-        InputStream inputStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/input4.txt");
-        // Output
-        InputStream outPutStream = this.getClass().getResourceAsStream("/interviewbit/problem0037/output4.txt");
-        // Call Method Under Test
-        ISolution problem = new MaximumAreaOfTriangle();
-        problem.solve(inputStream);
-        //Assertion
-        String actual = buffer.toString().trim();
-        String expected = IOUtils.toString(outPutStream, Charset.defaultCharset()).trim();
-        assertEquals(expected, actual);
-    }
-
-    @AfterEach
-    public void cleanup() {
-        buffer.reset();
+        runTest("input4.txt", "output4.txt");
     }
 }
