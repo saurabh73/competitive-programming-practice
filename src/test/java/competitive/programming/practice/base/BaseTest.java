@@ -1,8 +1,7 @@
-package competitive.programming.practice.platform;
+package competitive.programming.practice.base;
 
-import competitive.programming.practice.base.ISolution;
 import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -20,10 +19,6 @@ public abstract class BaseTest {
     protected BaseTest(String resourcePath, ISolution solution) {
         this.resourcePath = resourcePath;
         this.solution = solution;
-    }
-
-    @BeforeEach
-    public void setup() {
         this.buffer = new ByteArrayOutputStream();
         System.setOut(new PrintStream(buffer));
     }
@@ -41,5 +36,9 @@ public abstract class BaseTest {
         assertEquals(expected, actual);
     }
 
+    @AfterEach
+    public void cleanup() {
+        this.buffer.reset();
+    }
 
 }

@@ -1,6 +1,6 @@
 package competitive.programming.practice.platform.interviewbit.problem0006;
 
-import competitive.programming.practice.platform.BaseTest;
+import competitive.programming.practice.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -24,6 +24,6 @@ public class TotalMovesForBishopTest extends BaseTest {
 
     @Test
     public void case2Test() throws Exception {
-        runTest("input2.txt", "output2.txt");
+        runTest("input2.txt", "output1.txt");
     }
 }

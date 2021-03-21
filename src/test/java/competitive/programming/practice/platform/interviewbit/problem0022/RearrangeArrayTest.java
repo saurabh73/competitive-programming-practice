@@ -1,6 +1,6 @@
 package competitive.programming.practice.platform.interviewbit.problem0022;
 
-import competitive.programming.practice.platform.BaseTest;
+import competitive.programming.practice.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -26,7 +26,7 @@ public class RearrangeArrayTest extends BaseTest {
 
     @Test
     public void case2Test() throws Exception {
-        runTest("input2.txt", "output2.txt");
+        runTest("input2.txt", "output1.txt");
     }
 
 }
