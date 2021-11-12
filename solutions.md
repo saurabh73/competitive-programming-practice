@@ -1,0 +1,5 @@
+<!--TABLE_STARTS_HERE-->
+| Problem                                                                                       | File                                                                                                                                        | Platform     | Date       | Tags   | Status    | Notes |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------- | ------ | --------- | ----- |
+| [Max Non Negative SubArray](https://www.interviewbit.com/problems/max-non-negative-subarray/) | [MaxNonNegativeSubArray.java](src/main/java/competitive/programming/practice/platform/interviewbit/problem0001/MaxNonNegativeSubArray.java) | interviewbit | 2021-11-11 | `easy`,`array`,`google` | `pending` |       |
+<!--TABLE_ENDS_HERE-->
